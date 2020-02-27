@@ -18,7 +18,7 @@ int execBackground(char **args){
     {
       free(args[i-1]);
       args[i-1] = NULL;  // remove the ampersand
-      return 1;
+      return 1; 
     }
   else{
       return 0;
@@ -51,6 +51,6 @@ int executeCmd(char **args){
   else if(CheckBackground != 1){      
     do{
       waitpid(ID_tracker, &status, 0); 
-    } while (!WIFEXITED(status)); //wait till child exits 
+    } while (!WIFEXITED(status)); //wait till child exits/finishes 
   }
 }

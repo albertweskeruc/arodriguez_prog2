@@ -39,13 +39,13 @@ int main(){
 	  buff[inputSize-1] = '\0';
 
 
-
+	  //if true, skip the rest of the code and start again for user input
 	  if(buff[0] == '\0')
-
+      
 	    continue;
 
 
-
+	  //check for the lowercase x command to quit
 	  if((buff[0] == 'x') && (buff[1] == '\0')){
 
 	      exit(0);
@@ -55,7 +55,7 @@ int main(){
 
 	  // execute the command
 	 int CmdCheck = executeCmd(args);
-	 
+	 //invalid command detected
 	 if(CmdCheck == -1){
               printf("Command is invalid\n");
           }
